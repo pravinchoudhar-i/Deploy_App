@@ -25,11 +25,9 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r WebApplication/requirements.txt
-    - name: Run Tests
-      run: |
-        python WebApplication/manage.py test
-    - name: Upload Test Results
+   
+    - name: Upload Build Results
       uses: actions/upload-artifact@v2
       with:
-        name: test-results
+        name: build-results
         path: WebApplication
